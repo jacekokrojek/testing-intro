@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://www.santander.pl/klient-indywidualny/oszczednosci-i-inwestycje/elokata -->
+<html data-segment="klient-indywidualny" data-cms="activecontent" data-client="santanderbankpolska"
+  data-site="santanderbankpolska" data-node-id="1500334" lang="pl"
+  data-page-language-versions="{&quot;pl&quot;:&quot;/klient-indywidualny/oszczednosci-i-inwestycje/elokata&quot;}"
+  class=" platform--chrome is--desktop" data-platform-name="Chrome" data-platform-version="79.0.3945.130"
+  data-platform-layout="Blink" data-platform-os="Windows 10 64-bit"
+  data-platform-description="Chrome 79.0.3945.130 on Windows 10 64-bit">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>eLokata | Santander Bank Polska (dawniej BZWBK)</title>
+  <meta
+    content="Miej pewność, że Twoje oszczędności są w pełni bezpieczne – postaw na eLokatę banku Santander, ciesz się przyjaznym oprocentowaniem i pomnażaj pieniądze."
+    name="description">
+  <meta content="santander, bank santander, bzwbk" name="keywords">
+  <meta content="" name="robots">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="google-site-verification" content="2QP95PpnXVR7BBYgL5NxJE8FjzNWQMnXTZtfiyfRydU">
+  <meta name="google-site-verification" content="YpA8btPmey4UTZRllcYxLGa6fWVXq2sEXjrtXU23I7o">
+  <link rel="icon" type="image/x-icon"
+    href="https://www.santander.pl/_template/time20200113140752/1500003/util/favicon.ico?v=1">
+  <link type="text/css" rel="stylesheet" href="./index2_files/site-components.css">
+  <link rel="stylesheet" type="text/css" href="./index2_files/hot_fix.css">
+
+  <style>
+    .async-hide {
+      opacity: 0 !important
+    }
+  </style>
+  <script type="text/javascript" src="./index2_files/site-head.js.pobrane"></script>
+  <script type="text/javascript" src="./index2_files/site-tail.js.pobrane"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#calculate').click(function (e) {
+        function generujKomunikat(czas, wartosc) {
+          var message;
+          if (wartosc == null) {
+            message = 'Nie można otworzyć lokaty dla podanych parametrów';
+          } else if (czas === 1) {
+            message = 'Wartość lokaty po 1 roku to ' + wartosc + 'PLN';
+          } else {
+            message = 'Wartość lokaty po ' + czas + ' latach to ' + wartosc + 'PLN';
+          }
+          var html = '<p class="lead" id="message" style="font-size: 1.8rem;">' + message + '</p>'
+          return html;
+        }
+
+        function generujHtml(message) {
+          var html = '<h2>Dowiedz się więcej o eLokacie</h2> ' +
+            message +
+            '<div class="clearFix"></div>'
+          return html;
+        }
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "/rest/capital",
+          contentType: "application/json; charset=utf-8",
+          data: JSON.stringify({
+            kapital: parseFloat($("#input_kwota").val()),
+            czas: parseFloat($("#input_czas").val())
+          }),
+          dataType: "json",
+          success: function (result) {
+            var message = generujKomunikat(parseFloat($("#input_czas").val()), result.capital);
+            var html = generujHtml(message);
+            $('#component_content_1823820').html(html);
+          },
+          error: function (result) {
+            var message = generujKomunikat(parseFloat($("#input_czas").val()), result.capital);
+            var html = generujHtml(message);
+            $('#component_content_1823820').html(html);
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- webapp.js - from repository -->
+  <script type="text/javascript" src="./index2_files/webapp.js.pobrane"></script>
+
+</head>
+
+<body class="size_xlarge" data-system-url="">
+
+  <main id="main_wrapper" class="main_wrapper js_main-wrapper">
+    <div id="content_wrapper">
+      <div class="layout_element layout_section">
+        <div class="layout_element layout_container">
+          <div class="layout_element layout_row row row">
+            <div
+              class="layout_element layout_column  col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-12 col-sm-12 col-md-12 col-lg-12"
+              style="min-height: 0px;">
+              <div class="layout_element component_wrapper wrapped_header" id="component_wrapper_1823816">
+                <div class="component header notPrintable v-static component_1823816" data-component-id="1823816"
+                  data-component-type-code="header"
+                  data-js-parameters="{&quot;virtual_path_present&quot;:&quot;false&quot;,&quot;node_url&quot;:&quot;\/klient-indywidualny\/oszczednosci-i-inwestycje\/elokata&quot;}"
+                  id="header_1_21012019" style="height: 0px;">
+                  <header class="se-ignore header__site header__site--individual-clients">
+                    <div class="header__inner">
+
+
+                      <div class="content_area">
+                        <div class="header__search-layer">
+                          <div class="inner">
+                            <div class="header__search-preloader js-preloader-header">
+                              <div class="preloader">
+                                <div class="preloader__circle">
+                                  <div class="preloader__circle-gradient"></div>
+                                  <div class="preloader__circle-inner"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="header__search-frequently">
+                              <span class="header__frequently-title">Najczęściej wyszukiwane:</span>
+                              <div class="frequently_searched_container"></div>
+                            </div>
+                            <div class="search-header__autocompleter js-search-header__autocompleter"></div>
+                          </div>
+                          <div class="header__infographics header__infographics--search">
+                            <img src="./index2_files/reklama_karty_do_konta_2.png" class="header__infographics-image">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
+                  <div class="clearFix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="layout_element layout_section top_visual_with_description--imaged js-top_visual_with_description--imaged mask-overlay mask-overlay--dark image-to-right image-cover top_visual_with_description__spacer"
+        style="background-image: url(&quot;/_fileserver/time20190307140929/item/1501181&quot;); background-position: 80% 0px;">
+        <div class="layout_element layout_container">
+          <div class="layout_element layout_row row row">
+            <div
+              class="layout_element layout_column  col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="layout_element component_wrapper wrapped_breadcrumbs" id="component_wrapper_1823817">
+                <div class="component breadcrumbs component_1823817" data-component-id="1823817"
+                  data-component-type-code="breadcrumbs" data-js-parameters="{}" id="breadcrumbs_1_24112018">
+                  <div class="clearFix"></div>
+                </div>
+              </div>
+              <div class="layout_element component_wrapper wrapped_top_visual_with_description"
+                id="component_wrapper_1823818">
+                <div class="component top_visual_with_description is--product component_1823818"
+                  data-component-id="1823818" data-component-type-code="top_visual_with_description"
+                  data-js-parameters="{&quot;virtual_path_present&quot;:&quot;false&quot;,&quot;node_url&quot;:&quot;\/klient-indywidualny\/oszczednosci-i-inwestycje\/elokata&quot;}"
+                  id="top_visual_with_description_2_23112018">
+                  <script>var positionSettings = { xlargeoffset: { 'offset': 160 }, largeoffset: { 'offset': 160 }, mediumoffset: { 'offset': 160 }, smalloffset: { 'offset': 160 }, xsmalloffset: { 'offset': 160 } };</script>
+                  <div class="component__inner top_visual_with_description__inner"><span
+                      class="top_visual_with_description__circles"></span>
+                    <div class="js-top_visual_with_description__image top_visual_with_description__image"><img
+                        class="sr-only" alt="eLokata" src="./index2_files/KI_eLokata_KV.png"></div>
+                    <div class="top_visual_with_description__content top_visual_with_description__content--nobutton">
+                      <h1 class="top_visual_with_description__title ">eLokata</h1>
+                      <div class="top_visual_with_description__description content_area">
+                        <p class="h5">Zacznij oszczędzać tak, jak lubisz - online</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearFix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layout_element layout_section">
+        <div class="layout_element layout_container">
+          <div class="layout_element layout_row row row">
+            <div
+              class="layout_element layout_column  col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="layout_element component_wrapper wrapped_product_benefits" id="component_wrapper_1823819">
+                <div class="component product_benefits component_1823819" data-component-id="1823819"
+                  data-component-type-code="product_benefits"
+                  data-js-parameters="{&quot;virtual_path_present&quot;:&quot;false&quot;,&quot;node_url&quot;:&quot;\/klient-indywidualny\/oszczednosci-i-inwestycje\/elokata&quot;}"
+                  id="product_benefits_2_23112018">
+                  <div class="product_benefits__inner component__inner product_benefits--img-left ">
+                    <ul class="list-unstyled product_benefits__list product_benefits__list--columns4">
+                      <li class="product_benefits__element">
+                        <div class="product_benefits__icon"><img alt="Oprocentowanie" src="./index2_files/b-037-m.svg">
+                        </div>
+                        <div class="product_benefits__text">
+                          <h6 class="product_benefits__header">Oprocentowanie</h6>
+                          <div class="product_benefits__content">
+                            <p>Korzystaj ze stałego oprocentowania 2,00% w skali roku</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="product_benefits__element">
+                        <div class="product_benefits__icon"><img alt="Kwota lokaty" src="./index2_files/c-014-m.svg">
+                        </div>
+                        <div class="product_benefits__text">
+                          <h6 class="product_benefits__header">Kwota minimalna</h6>
+                          <div class="product_benefits__content">
+                            <p>Zacznij oszczędzać już od 1000 zł</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="product_benefits__element">
+                        <div class="product_benefits__icon"><img alt="Kwota lokaty" src="./index2_files/c-014-m.svg">
+                        </div>
+                        <div class="product_benefits__text">
+                          <h6 class="product_benefits__header">Kwota maksymalna</h6>
+                          <div class="product_benefits__content">
+                            <p>Na lokatę możesz wpłacić maksymalnie 1&nbsp;000 000 zł</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="product_benefits__element">
+                        <div class="product_benefits__icon"><img alt="Okres oszczędzania"
+                            src="./index2_files/a-012-m.svg"></div>
+                        <div class="product_benefits__text">
+                          <h6 class="product_benefits__header">Okres oszczędzania</h6>
+                          <div class="product_benefits__content">
+                            <p>Lokata jest krótkoterminowa – zakładasz ją na 1 miesiąc</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="clearFix"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="layout_element layout_section bg-gray">
+          <div class="layout_element layout_container">
+            <div class="layout_element layout_row row row">
+              <div
+                class="layout_element layout_column  col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="layout_element component_wrapper wrapped_content" id="component_wrapper_1823820">
+                  <div class="component content content-title no-padding-bottom component_1823820"
+                    data-component-id="1823820" data-component-type-code="content" data-js-parameters="{}"
+                    id="content_4_23112018">
+                    <div class="content_area" id="component_content_1823820">
+                      <h2>Dowiedz się więcej o eLokacie</h2>
+
+                      <p class="lead" style="font-size: 1.8rem;">Wartość lokaty po 2 latach to 1440PLN</p>
+                      <div class="clearFix"></div>
+                    </div>
+                    <div class="clearFix"></div>
+                  </div>
+                </div>
+                <div class="layout_element component_wrapper wrapped_product_benefits" id="component_wrapper_1823821">
+                  <div class="component product_benefits v-bordered no-padding-bottom component_1823821"
+                    data-component-id="1823821" data-component-type-code="product_benefits" data-js-parameters="{}"
+                    id="product_benefits_1_21012019">
+                    <div class="product_benefits__inner component__inner  ">
+                      <ul class="list-unstyled product_benefits__list product_benefits__list--columns2">
+                        <li class="product_benefits__element">
+                          <div class="product_benefits__icon"></div>
+                          <div class="product_benefits__content" style="float:right;">
+
+                            <span class="product_benefits__header" style="font-size: 1.6rem; font-weight: 600; ">Kwota:
+                            </span><input id="input_kwota" name="nik" size="10" maxlength="20" step="2"
+                              autocomplete="off" tabindex="2" value="1000" minlength="6">
+                          </div>
+                        </li>
+                        <li class="product_benefits__element">
+                          <div class="product_benefits__icon"></div>
+
+                          <span class="product_benefits__header" style="font-size: 1.6rem; font-weight: 600;">Czas
+                            oszczędzania (lata): </span><input id="input_czas" name="nik" size="10" maxlength="20"
+                            step="2" autocomplete="off" tabindex="2" value="2" minlength="6">
+
+                        </li>
+                      </ul>
+
+                    </div>
+
+
+                    <div class="product_benefits__button"><a id="calculate" class="button primary js-window-link"
+                        style="margin: 10px;"><span>Oblicz</span></a></div>
+
+                    <div class="content_area" id="component_content_1823820" style="text-align: right;">
+                      <h2></h2>
+
+                      <p class="lead">Jeśli jesteś zainteresowany <a class="button primary js-window-link"
+                          style="margin: 10px;"><span>Otwórz lokatę</span></a>
+                      </p>
+                      <div class="clearFix"></div>
+                    </div>
+                  </div>
+                  <div class="clearFix"></div>
+                  <div class="clearFix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="layout_element layout_section">
+          <div class="layout_element layout_container">
+            <div class="layout_element layout_row row row">
+              <div
+                class="layout_element layout_column  col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-12 col-sm-12 col-md-12 col-lg-12"
+                style="min-height: 0px;">
+                <div class="layout_element component_wrapper wrapped_content" id="component_wrapper_1823830">
+                  <div class="component content content-title no-padding-bottom component_1823830"
+                    data-component-id="1823830" data-component-type-code="content"
+                    data-js-parameters="{&quot;virtual_path_present&quot;:&quot;false&quot;,&quot;node_url&quot;:&quot;\/klient-indywidualny\/oszczednosci-i-inwestycje\/elokata&quot;}"
+                    id="content_1_04032019">
+                    <div class="content_area" id="component_content_1823830">
+                      <h2>Polecamy także inne produkty</h2>
+
+                      <p class="lead"></p>
+                      <div class="clearFix"></div>
+                    </div>
+                    <div class="clearFix"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+</body>
+
+</html>

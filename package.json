@@ -1,0 +1,38 @@
+{
+  "name": "testing-intro",
+  "version": "0.1.3",
+  "description": "",
+  "license": "public",
+  "private": false,
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "unit-test": "node node_modules/jasmine/bin/jasmine test/calculations.spec.js",
+    "int-test": "node node_modules/jasmine/bin/jasmine test/app.spec.js",
+    "preinstall": "npm install -g protractor && webdriver-manager update",
+    "sonar": "node utils/sonar/sonar-project.js",
+    "test-cover": "istanbul cover utils/jasmine/config.js && istanbul check-coverage",
+    "e2e-test": "protractor e2e/conf.js",
+    "pree2e-test": "webdriver-manager update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacekokrojek/testing-intro.git"
+  },
+  "author": "Jacek Okrojek",
+  "devDependencies": {
+    "jasmine": "^2.3.2",
+    "jasmine-reporters": "^2.0.7",
+    "jasmine-spec-reporter": "^2.5.0",
+    "jasmine2-custom-message": "^0.8.0",
+    "protractor": "^5.4.2",
+    "sonarqube-scanner": "^2.5.0"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "express": "^4.17.1",
+    "istanbul": "^0.4.5",
+    "jasmine-console-reporter": "^3.1.0",
+    "supertest": "^4.0.2"
+  }
+}
